@@ -1,7 +1,7 @@
-function FunctionalComponent() {
+function FunctionalComponent({ name }: { name: string }) {
   return (
     <div>
-      <button>testbutton</button>
+      <button>{name}</button>
     </div>
   );
 }
