@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Identity from "./Identity";
+import Identity from "../../Identity";
 import Image from "./Image";
 
 export default interface Item extends Identity {
