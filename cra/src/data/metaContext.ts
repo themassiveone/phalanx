@@ -1,31 +1,18 @@
 import { createContext } from "react";
 import { Entity } from "../types";
 
-export const defaultValue: MetaContextRoot = {
-  entities: {
-    data: [],
-    set(x) {
-      console.log("not implemented");
-    },
-  },
-};
-
 export interface MetaContextRoot {
-  entities: State<Entity>;
+  entities: State<Entity[]>;
 }
-export interface State<T> {
-  data: T[];
-  set(x: T[]): void;
+type State<T> = StateInterface<T> | null;
+
+export interface StateInterface<T> {
+  data: T;
+  setter: React.Dispatch<React.SetStateAction<T>>;
 }
 
-export const metaContext = createContext<MetaContextRoot>(defaultValue);
-
-// export const loadAll = (context: MetaContextRoot) => {
-//   console.log("load function called");
-//   loadEntity(
-//     "entity",
-//     (context, value) => {
-//       context.entities = value as Entity[];
-//     },
-//   );
-// };
+export const defaultValue = {
+  entities: null,
+};
+const metaContext = createContext<MetaContextRoot>(defaultValue);
+export default metaContext;
