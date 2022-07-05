@@ -10,10 +10,16 @@ const Base: React.FC<BaseProps> = ({}) => {
   return (
     <Box>
       <Navbar></Navbar>
-      <Stack direction={"row"}>
-        <Sidebar></Sidebar>
-        <Content></Content>
-        <Rightbar></Rightbar>
+      <Stack direction={"row"} display={"flex"}>
+        <Box flex={1}>
+          <Sidebar></Sidebar>
+        </Box>
+        <Box flex={4}>
+          <Content></Content>
+        </Box>
+        <Box flex={2}>
+          <Rightbar></Rightbar>
+        </Box>
       </Stack>
     </Box>
   );
