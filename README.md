@@ -8,4 +8,4 @@ Major inspirations have been drawn from https://github.com/marmelab/react-admin.
 
 Visualized components have been created using https://github.com/mui/material-ui.
 
-Relevant components have been isolated in order to avoid distractions in commit e605cc87125d9409012dd1b540f43e6b4c6bfd50.
+Relevant components have been isolated in order to avoid distractions in commit https://github.com/themassiveone/phalanx/commit/e605cc87125d9409012dd1b540f43e6b4c6bfd50.
